@@ -38,7 +38,7 @@
 5. make sure to configure mysql in `.env` 
 6. run `php artisan migrate` (if you get any error make sure your database is configured correctly)
 7. run `php artisan key:generate`
-6. run `php artisan serve`
-7. visit `http://127.0.0.1:8000`
+8. run `php artisan serve`
+9. visit `http://127.0.0.1:8000`
 
 
