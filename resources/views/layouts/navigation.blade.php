@@ -9,13 +9,12 @@
                         <x-application-logo class="block h-10 w-auto fill-current text-gray-600" />
                     </a>
                 </div>
-
-                <!-- Navigation Links -->
+                {{-- left menu --}}
                 <div class="hidden space-x-8 sm:-my-px sm:ml-10 sm:flex">
                     @auth
-                        <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                            {{ __('Dashboard') }}
-                        </x-nav-link>
+                    <x-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                        {{ __('Dashboard') }}
+                    </x-nav-link>
                     @else
                     <x-nav-link :href="route('login')">
                         Login
@@ -25,6 +24,9 @@
                     </x-nav-link>
                     @endauth
                 </div>
+            </div>
+            <div class="hidden sm:flex sm:items-center sm:w-72">
+                <x-input id="search" class="block mt-1 w-full" type="search" name="search" :value="old('search')" placeholder="Search ..." />
             </div>
 
             @auth
@@ -125,6 +127,9 @@
             </div>
             @endauth
 
+            <div class="mx-6 mb-3">
+                <x-input id="search" class="block mt-1 w-full" type="search" name="search" :value="old('search')" placeholder="Search ..." />
+            </div>
         </div>
 
     </div>
