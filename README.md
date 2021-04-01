@@ -10,7 +10,7 @@
 </a>
 </p>
 
-![main page](git-images/main_page.png)
+![main page](git-images/main_page_2.png)
 
 
 ## 💎 Features
