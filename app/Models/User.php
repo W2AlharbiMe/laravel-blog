@@ -53,4 +53,19 @@ class User extends Authenticatable
             $user->avatar = 'default-'.rand(1, 5).'.png';
         });
     }
+
+
+    public function usesDefaultAvatar()
+    {
+        return @\preg_match('/default\-[1-5]\.png/', $this->avatar) === 1;
+    }
+
+    public function getAvatar()
+    {
+        if ($this->usesDefaultAvatar()) {
+            return '/avatars/' . $this->avatar;
+        }
+
+        return $this->avatar;
+    }
 }

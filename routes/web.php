@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\UserSettingsController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -15,6 +16,13 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     return view('welcome');
+});
+
+
+Route::prefix('@me')->middleware(['auth'])->group(function () {
+    Route::get('settings', [UserSettingsController::class, 'index'])->name('my.settings');
+    Route::put('settings', [UserSettingsController::class, 'update'])->name('my.settings.update');
+    Route::delete('settings', [UserSettingsController::class, 'destroy'])->name('my.settings.destroy');
 });
 
 Route::get('/dashboard', function () {
