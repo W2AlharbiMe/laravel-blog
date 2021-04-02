@@ -16,10 +16,10 @@
 
 <body class="bg-gray-100 mb-12">
     @include('layouts.navigation')
-    <div class="max-w-screen-xl mx-auto mt-16">
+    <div class="max-w-screen-xl mx-auto mt-16 px-6 sm:px-0">
         {{-- main section --}}
         <div class="grid grid-cols-12 gap-4">
-            <a href="#!" class="relative col-span-6 w-full transform hover:-translate-y-4 transition duration-200 hover:shadow-lg" style="height: 440px;">
+            <a href="#!" class="relative col-span-12 sm:col-span-6 w-full sm:transform sm:hover:-translate-y-4 sm:transition sm:duration-200 sm:hover:shadow-lg" style="height: 440px;">
                 <div class="absolute left-0 bottom-0 w-full h-full z-10 rounded"
                     style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));"></div>
 
@@ -30,7 +30,7 @@
 
                 <div class="p-4 absolute inset-0 w-full h-full z-10 flex flex-col items-start justify-end">
                     <span class="px-4 py-1 bg-blue-600 text-gray-200 mb-2 transform -skew-x-12">Nutrition</span>
-                    <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
+                    <h2 class="text-xl sm:text-4xl sm:font-semibold text-gray-100 leading-tight">
                         Pellentesque a consectetur velit, ac molestie ipsum. Donec sodales, massa et auctor.
                     </h2>
                     <div class="flex justify-between items-center w-full mt-3">
@@ -51,7 +51,7 @@
 
 
 
-            <a href="#!" class="relative col-span-6 w-full transform hover:-translate-y-4 transition duration-200 hover:shadow-lg" style="height: 440px;">
+            <a href="#!" class="relative col-span-12 sm:col-span-6 w-full sm:transform sm:hover:-translate-y-4 sm:transition sm:duration-200 sm:hover:shadow-lg" style="height: 440px;">
                 <div class="absolute left-0 bottom-0 w-full h-full z-10 rounded"
                     style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));"></div>
 
@@ -63,7 +63,7 @@
                 <div class="p-4 absolute inset-0 w-full h-full z-10 flex flex-col items-start justify-end">
                     <span
                         class="px-4 py-1 bg-yellow-600 text-gray-200 inline-flex items-center justify-center mb-2 transform -skew-x-12">Science</span>
-                    <h2 class="text-4xl font-semibold text-gray-100 leading-tight">
+                    <h2 class="text-xl sm:text-4xl sm:font-semibold text-gray-100 leading-tight">
                         Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magnam sit ad impedit placeat?
                     </h2>
                     <div class="flex justify-between items-center w-full ">
@@ -85,7 +85,7 @@
 
         <div class="grid grid-cols-6 gap-4 mt-6">
 
-            <div class="w-full col-span-4">
+            <div class="w-full col-span-12 sm:col-span-4">
                 @for ($i = 2; $i >= 0; $i--)
 
                 {{-- single post --}}
@@ -94,17 +94,16 @@
                         {{-- image --}}
                         <div>
                             <img src="https://images.unsplash.com/photo-1617225446279-1833ed3dd3e6?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=634&q=80"
-                                alt="" class="w-64 rounded-l object-cover" style="height: 204px;" />
+                                alt="" class="w-64 rounded-l object-cover h-full sm:h-52" />
                         </div>
 
                         {{-- info --}}
                         <div class="py-4">
-                            <h1 class="mt-3 md:mt-0 text-gray-700 font-bold text-2xl mb-2">
+                            <h1 class="mt-3 md:mt-0 text-gray-700 font-bold text-xl sm:text-2xl mb-2">
                                 Aliquam venenatis nisl id purus rhoncus, in efficitur sem hendrerit.
                             </h1>
                             <p>
                                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. Autem minima odio deserunt
-                                quibusdam iure voluptates aperiam. Fugit fugiat distinctio iste?...
                             </p>
 
                             {{-- by & when --}}
@@ -175,7 +174,7 @@
             </div>
 
 
-            <div class="col-span-2 w-full">
+            <div class="col-span-12 sm:col-span-2 w-full">
                 <div class="w-full bg-white shadow p-6 rounded">
                     <div class="mb-4">
                         <h5 class="font-bold text-lg uppercase text-gray-700 px-1 mb-2"> Popular Tags </h5>
