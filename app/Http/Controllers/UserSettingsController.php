@@ -29,16 +29,14 @@ class UserSettingsController extends Controller
      */
     public function update(Request $request)
     {
-        $user_id = $request->user()->id;
+        $user = $request->user();
         $updated = false;
         $request->validate([
-            'email' => 'required|string|email|max:255|unique:users,email,' . $user_id . ',id',
+            'email' => 'required|string|email|max:255|unique:users,email,' . $user->id . ',id',
             'name' => 'required|string|max:255',
             'password' => 'string|confirmed|min:8|nullable',
             'avatar' => 'file|image|mimes:png,jpg,jpeg,gif|nullable',
         ]);
-
-        $user = User::find($user_id);
 
         if ($user->name != $request->name) {
             $user->name = $request->name;
