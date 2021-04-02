@@ -20,13 +20,14 @@ Route::get('/', function () {
 
 
 Route::prefix('@my')->middleware(['auth'])->group(function () {
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->middleware(['auth'])->name('dashboard');
+
     Route::get('settings', [UserSettingsController::class, 'index'])->name('my.settings');
     Route::put('settings', [UserSettingsController::class, 'update'])->name('my.settings.update');
     Route::delete('settings', [UserSettingsController::class, 'destroy'])->name('my.settings.destroy');
 });
 
-Route::get('/dashboard', function () {
-    return view('dashboard');
-})->middleware(['auth'])->name('dashboard');
 
 require __DIR__.'/auth.php';
