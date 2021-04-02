@@ -19,7 +19,7 @@
     <div class="max-w-screen-xl mx-auto mt-16">
         {{-- main section --}}
         <div class="grid grid-cols-12 gap-4">
-            <a href="#!" class="relative col-span-6 w-full" style="height: 440px;">
+            <a href="#!" class="relative col-span-6 w-full transform hover:-translate-y-4 transition duration-200 hover:shadow-lg" style="height: 440px;">
                 <div class="absolute left-0 bottom-0 w-full h-full z-10 rounded"
                     style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));"></div>
 
@@ -51,7 +51,7 @@
 
 
 
-            <a href="#!" class="relative col-span-6 w-full" style="height: 440px;">
+            <a href="#!" class="relative col-span-6 w-full transform hover:-translate-y-4 transition duration-200 hover:shadow-lg" style="height: 440px;">
                 <div class="absolute left-0 bottom-0 w-full h-full z-10 rounded"
                     style="background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.7));"></div>
 
@@ -89,7 +89,7 @@
                 @for ($i = 2; $i >= 0; $i--)
 
                 {{-- single post --}}
-                <a href="#!" class="block w-full bg-white shadow rounded mb-6">
+                <a href="#!" class="block w-full bg-white shadow rounded mb-6 hover:bg-indigo-50 transition duration-200">
                     <div class="grid grid-flow-col gap-4">
                         {{-- image --}}
                         <div>
@@ -182,20 +182,20 @@
                         <hr />
                     </div>
                     <ul>
-                        <li>
-                            <a href="#!">tag 1</a>
+                        <li class="block">
+                            <a href="#!" class="block text-base text-gray-700 transition duration-200 hover:text-indigo-400">tag 1</a>
                         </li>
-                        <li>
-                            <a href="#!">tag 2</a>
+                        <li class="block">
+                            <a href="#!" class="block text-base text-gray-700 transition duration-200 hover:text-indigo-400">tag 2</a>
                         </li>
-                        <li>
-                            <a href="#!">tag 3</a>
+                        <li class="block">
+                            <a href="#!" class="block text-base text-gray-700 transition duration-200 hover:text-indigo-400">tag 3</a>
                         </li>
-                        <li>
-                            <a href="#!">tag 4</a>
+                        <li class="block">
+                            <a href="#!" class="block text-base text-gray-700 transition duration-200 hover:text-indigo-400">tag 4</a>
                         </li>
-                        <li>
-                            <a href="#!">tag 5</a>
+                        <li class="block">
+                            <a href="#!" class="block text-base text-gray-700 transition duration-200 hover:text-indigo-400">tag 5</a>
                         </li>
                     </ul>
                 </div>
@@ -213,7 +213,7 @@
                     <x-input id="subs" class="block mt-1 w-full" type="text" name="subs" :value="old('subs')"
                         placeholder="your email address ..." />
 
-                    <button class="mt-2 px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-200 rounded w-full capitalize tracking-wide">
+                    <button class="mt-2 px-4 py-2 bg-indigo-500 hover:bg-indigo-600 text-gray-200 rounded w-full capitalize tracking-wide transition duration-200">
                         Subscribe
                     </button>
                 </div>
